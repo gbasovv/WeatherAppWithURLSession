@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="DailyTVC" customModule="WeatherApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Day" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gUG-8b-ZsB">
+                        <rect key="frame" x="15" y="12" width="150" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="150" id="lrI-hq-nPm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="raO-IN-4db">
+                        <rect key="frame" x="235" y="12" width="70" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Max" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fti-kD-dEv">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Min" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nbc-HH-MZt">
+                                <rect key="frame" x="42" y="0.0" width="28" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemGray2Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3DR-7b-Yyl">
+                        <rect key="frame" x="185" y="5" width="35" height="35"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="35" id="QKd-yS-4ld"/>
+                            <constraint firstAttribute="height" constant="35" id="cd0-Dt-3cE"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gUG-8b-ZsB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="1Cj-vY-BXf"/>
+                    <constraint firstItem="gUG-8b-ZsB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="24y-xV-X02"/>
+                    <constraint firstItem="3DR-7b-Yyl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="7CX-Iz-f7j"/>
+                    <constraint firstAttribute="trailing" secondItem="raO-IN-4db" secondAttribute="trailing" constant="15" id="Dh4-sN-1Pt"/>
+                    <constraint firstAttribute="bottom" secondItem="gUG-8b-ZsB" secondAttribute="bottom" constant="11" id="HLv-aR-ecF"/>
+                    <constraint firstItem="raO-IN-4db" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="IA1-gY-jRq"/>
+                    <constraint firstItem="3DR-7b-Yyl" firstAttribute="leading" secondItem="gUG-8b-ZsB" secondAttribute="trailing" constant="20" id="MCl-eR-QMg"/>
+                    <constraint firstAttribute="bottom" secondItem="3DR-7b-Yyl" secondAttribute="bottom" constant="4" id="l5C-Hr-Hb7"/>
+                    <constraint firstAttribute="bottom" secondItem="raO-IN-4db" secondAttribute="bottom" constant="11.5" id="o2n-2c-Fks"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="dayLbl" destination="gUG-8b-ZsB" id="gjt-xC-MMd"/>
+                <outlet property="maxTempLbl" destination="Fti-kD-dEv" id="0uj-gZ-EoL"/>
+                <outlet property="minTempLbl" destination="nbc-HH-MZt" id="hba-ka-l9I"/>
+                <outlet property="weatherImage" destination="3DR-7b-Yyl" id="yAp-oT-Cyf"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="108.48214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
